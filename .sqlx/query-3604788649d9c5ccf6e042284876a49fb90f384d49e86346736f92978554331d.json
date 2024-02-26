@@ -1,0 +1,34 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select * from Customers where id = $1 limit 1 for update",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "account_limit",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "balance",
+        "type_info": "Int4"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "3604788649d9c5ccf6e042284876a49fb90f384d49e86346736f92978554331d"
+}

@@ -1,0 +1,13 @@
+POST http://localhost:3000/clientes/1/transacoes
+Content-Type: application/json
+
+{
+    "valor": 5000,
+    "tipo" : "c",
+    "descricao" : "descricao"
+}
+###
+
+GET http://localhost:9999/clientes//extrato
+
+###

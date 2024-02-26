@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "update Customers set balance = $1 where id = $2",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "ed3c465faf23539aa84976394ba348a7694960b8fad64847b670952b623c8a38"
+}

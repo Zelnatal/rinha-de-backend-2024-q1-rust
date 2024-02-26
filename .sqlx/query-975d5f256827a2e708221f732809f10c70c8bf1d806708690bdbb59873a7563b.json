@@ -1,0 +1,62 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select id, value, description, kind as \"kind!: TransactionsKindDb\", created_at, customer_id from Transactions where customer_id = $1 order by created_at desc limit 10",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "value",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 2,
+        "name": "description",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 3,
+        "name": "kind!: TransactionsKindDb",
+        "type_info": {
+          "Custom": {
+            "name": "transactions_kind",
+            "kind": {
+              "Enum": [
+                "credit",
+                "debit"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ordinal": 4,
+        "name": "created_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 5,
+        "name": "customer_id",
+        "type_info": "Int4"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "975d5f256827a2e708221f732809f10c70c8bf1d806708690bdbb59873a7563b"
+}

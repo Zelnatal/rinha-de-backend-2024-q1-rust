@@ -1,0 +1,28 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "insert into Transactions (value,description,kind,created_at,customer_id) values($1,$2,$3,$4,$5)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Varchar",
+        {
+          "Custom": {
+            "name": "transactions_kind",
+            "kind": {
+              "Enum": [
+                "credit",
+                "debit"
+              ]
+            }
+          }
+        },
+        "Timestamptz",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "f1097c762d421191ec938104d630f8cb78a3d20542f8459158bbb16369bdb866"
+}
