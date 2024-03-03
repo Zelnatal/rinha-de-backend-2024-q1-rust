@@ -2,7 +2,7 @@ version: '3'
 services:
 
   nginx:
-    image: nginx:1.15-alpine
+    image: nginx:1.15
     hostname: nginx
     restart: unless-stopped
     ports:
@@ -37,10 +37,10 @@ services:
   
   app1:
     <<: *app
-    hostname: app2
+    hostname: app1
 
   db:
-    image: postgres:16-alpine
+    image: postgres:16
     hostname: database
     restart: unless-stopped
     command: postgres -c config_file=/etc/postgresql.conf

@@ -8,6 +8,5 @@ Content-Type: application/json
 }
 ###
 
-GET http://localhost:9999/clientes//extrato
-
+GET http://localhost:9999/clientes/1/extrato HTTP/2
 ###
